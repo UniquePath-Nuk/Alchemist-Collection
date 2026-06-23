@@ -1,23 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Alchemist — Supercar Markets</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="dist/output.css">
+</head>
+<body class="bg-bg text-text font-body antialiased">
+
+<div data-include="sections/nav.html"></div>
+<div data-include="sections/hero.html"></div>
+<div data-include="sections/markets.html"></div>
+<div data-include="sections/spotlight.html"></div>
+<div data-include="sections/features-gallery.html"></div>
+<div data-include="sections/footer.html"></div>
+
 <script>
+  // Loads each section file into its placeholder div, in order, then removes the wrapper.
+  // Pure HTML/CSS site — this is the only JS, and it only stitches static partials together.
   async function loadIncludes() {
     const includes = document.querySelectorAll('[data-include]');
-
     for (const el of includes) {
       const path = el.getAttribute('data-include');
       try {
-        const res = await fetch(`./${path}`);
+        const res = await fetch(path);
         if (!res.ok) throw new Error(res.status);
         el.outerHTML = await res.text();
       } catch (err) {
-        el.outerHTML =
-          '<p style="color:#F6465D;padding:24px;font-family:monospace;">Failed to load ' +
-          path +
-          '</p>';
+        el.outerHTML = '<p style="color:#F6465D;padding:24px;font-family:monospace;">Failed to load ' + path + '</p>';
         console.error('Include failed:', path, err);
       }
     }
 
-    // After all includes are loaded, re‑attempt the scroll
+    // Fix: if the URL has a #hash (e.g. index.html#markets), the browser tries to
+    // scroll to it BEFORE the sections above have finished loading, so the jump
+    // silently fails since the target element doesn't exist in the DOM yet.
+    // Re-attempt the scroll now that every section is in place.
     if (window.location.hash) {
       const target = document.querySelector(window.location.hash);
       if (target) {
@@ -25,6 +48,8 @@
       }
     }
   }
-
   loadIncludes();
 </script>
+
+</body>
+</html>
