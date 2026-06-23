@@ -1,0 +1,122 @@
+<!-- ═══ HERO — featured car as a "ticker" card ═══ -->
+<section class="relative overflow-hidden border-b border-border">
+  <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(0,194,168,0.08),transparent_55%)]"></div>
+
+  <div class="relative mx-auto max-w-[1440px] px-4 py-12 sm:px-6 sm:py-16 lg:py-20">
+    <div class="grid gap-10 lg:grid-cols-2 lg:items-center lg:gap-16">
+
+      <!-- Left: headline + featured ticker -->
+      <div>
+        <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-border-light bg-surface px-3 py-1.5 text-[11px] font-medium text-text-dim">
+          <span class="h-1.5 w-1.5 rounded-full bg-accent"></span>
+          Season 2026 listing now open
+        </div>
+
+        <h1 class="font-display text-4xl font-bold leading-[1.1] tracking-tight text-text sm:text-5xl lg:text-6xl">
+          The supercar<br/>market, <span class="text-accent">priced live.</span>
+        </h1>
+
+        <p class="mt-6 max-w-md text-[15px] leading-relaxed text-text-dim">
+          Track power, acceleration, and price across the world's fastest production cars — laid out the way you'd track an asset, because that's exactly what these are.
+        </p>
+
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="#markets" class="rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-bg transition-colors hover:bg-accent/90">
+            View all markets
+          </a>
+          <a href="#spotlight" class="rounded-lg border border-border-light px-6 py-3 text-sm font-semibold text-text transition-colors hover:border-text-faint">
+            Today's spotlight
+          </a>
+        </div>
+
+        <!-- Featured ticker strip -->
+        <div class="mt-10 grid grid-cols-3 divide-x divide-border rounded-xl border border-border bg-surface">
+          <div class="px-5 py-4">
+            <div class="num text-xl font-bold text-text">1,578<span class="ml-0.5 text-xs text-accent">hp</span></div>
+            <div class="mt-1 text-[10px] font-medium uppercase tracking-wider text-text-faint">Peak Output</div>
+          </div>
+          <div class="px-5 py-4">
+            <div class="num text-xl font-bold text-text">2.3<span class="ml-0.5 text-xs text-accent">s</span></div>
+            <div class="mt-1 text-[10px] font-medium uppercase tracking-wider text-text-faint">0-60 mph</div>
+          </div>
+          <div class="px-5 py-4">
+            <div class="num text-xl font-bold text-text">304<span class="ml-0.5 text-xs text-accent">mph</span></div>
+            <div class="mt-1 text-[10px] font-medium uppercase tracking-wider text-text-faint">Top Speed</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: featured car "ticker card" -->
+      <div class="rounded-2xl border border-border bg-surface p-5 shadow-2xl shadow-black/40">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <img src="https://www.topgear.com/sites/default/files/2022/07/2-Bugatti-Chiron.jpg?w=1784&h=1004" alt="Bugatti Chiron Super Sport" class="h-11 w-11 shrink-0 rounded-lg bg-surface-2 object-cover"/>
+            <div>
+              <div class="font-display text-base font-bold text-text">Chiron Super Sport</div>
+              <div class="text-xs text-text-faint">BUGATTI · W16 · QUAD-TURBO</div>
+            </div>
+          </div>
+          <span class="rounded-md bg-up-dim px-2.5 py-1 text-xs font-semibold text-up">Top Mover</span>
+        </div>
+
+        <div class="mt-5 flex items-end justify-between">
+          <div>
+            <div class="num text-3xl font-bold text-text">$3,900,000</div>
+            <div class="mt-1 flex items-center gap-1.5 text-sm">
+              <span class="num font-semibold text-up">▲ 304 mph</span>
+              <span class="text-text-faint">fastest in class</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- mini sparkline (power curve illustration, not a real price chart) -->
+        <svg viewBox="0 0 400 90" class="mt-5 h-20 w-full" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="sparkFill" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#00C2A8" stop-opacity="0.25"/>
+              <stop offset="100%" stop-color="#00C2A8" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <path d="M0,70 L40,62 L80,64 L120,48 L160,52 L200,34 L240,38 L280,20 L320,24 L360,8 L400,12 L400,90 L0,90 Z" fill="url(#sparkFill)"/>
+          <path d="M0,70 L40,62 L80,64 L120,48 L160,52 L200,34 L240,38 L280,20 L320,24 L360,8 L400,12" fill="none" stroke="#00C2A8" stroke-width="2"/>
+        </svg>
+        <div class="flex justify-between text-[10px] font-medium uppercase tracking-wider text-text-faint">
+          <span>0 mph</span>
+          <span>Power curve to top speed</span>
+          <span>304 mph</span>
+        </div>
+
+        <a href="cars/chiron.html" class="mt-5 block rounded-lg border border-border-light py-2.5 text-center text-sm font-semibold text-text transition-colors hover:border-accent hover:text-accent">
+  View full spec sheet
+</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ MARQUEE — scrolling spec ticker ═══ -->
+<div class="overflow-hidden border-b border-border bg-surface py-3">
+  <div class="flex w-max animate-marquee gap-10">
+    <div class="flex gap-10">
+      <span class="flex items-center gap-2 whitespace-nowrap text-xs font-medium text-text-dim"><span class="num text-up">●</span> Aerodynamics</span>
+      <span class="flex items-center gap-2 whitespace-nowrap text-xs font-medium text-text-dim"><span class="num text-up">●</span> Carbon Fibre Monocoque</span>
+      <span class="flex items-center gap-2 whitespace-nowrap text-xs font-medium text-text-dim"><span class="num text-up">●</span> Twin-Turbo V8</span>
+      <span class="flex items-center gap-2 whitespace-nowrap text-xs font-medium text-text-dim"><span class="num text-up">●</span> Hybrid Powertrain</span>
+      <span class="flex items-center gap-2 whitespace-nowrap text-xs font-medium text-text-dim"><span class="num text-up">●</span> Active Suspension</span>
+      <span class="flex items-center gap-2 whitespace-nowrap text-xs font-medium text-text-dim"><span class="num text-up">●</span> Ceramic Brakes</span>
+      <span class="flex items-center gap-2 whitespace-nowrap text-xs font-medium text-text-dim"><span class="num text-up">●</span> Track-Tuned</span>
+      <span class="flex items-center gap-2 whitespace-nowrap text-xs font-medium text-text-dim"><span class="num text-up">●</span> Bespoke Interior</span>
+    </div>
+    <div class="flex gap-10" aria-hidden="true">
+      <span class="flex items-center gap-2 whitespace-nowrap text-xs font-medium text-text-dim"><span class="num text-up">●</span> Aerodynamics</span>
+      <span class="flex items-center gap-2 whitespace-nowrap text-xs font-medium text-text-dim"><span class="num text-up">●</span> Carbon Fibre Monocoque</span>
+      <span class="flex items-center gap-2 whitespace-nowrap text-xs font-medium text-text-dim"><span class="num text-up">●</span> Twin-Turbo V8</span>
+      <span class="flex items-center gap-2 whitespace-nowrap text-xs font-medium text-text-dim"><span class="num text-up">●</span> Hybrid Powertrain</span>
+      <span class="flex items-center gap-2 whitespace-nowrap text-xs font-medium text-text-dim"><span class="num text-up">●</span> Active Suspension</span>
+      <span class="flex items-center gap-2 whitespace-nowrap text-xs font-medium text-text-dim"><span class="num text-up">●</span> Ceramic Brakes</span>
+      <span class="flex items-center gap-2 whitespace-nowrap text-xs font-medium text-text-dim"><span class="num text-up">●</span> Track-Tuned</span>
+      <span class="flex items-center gap-2 whitespace-nowrap text-xs font-medium text-text-dim"><span class="num text-up">●</span> Bespoke Interior</span>
+    </div>
+  </div>
+</div>

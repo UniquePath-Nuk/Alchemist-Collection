@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>765LT — Alchemist</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../dist/output.css">
+</head>
+<body class="bg-bg text-text font-body antialiased">
+
+<!-- ═══ NAV ═══ -->
+<nav class="sticky top-0 z-50 border-b border-border bg-bg/95 backdrop-blur-md">
+  <div class="mx-auto flex h-16 max-w-[1440px] items-center justify-between px-4 sm:px-6">
+    <div class="flex items-center gap-8">
+      <a href="../index.html" class="font-display text-xl font-bold tracking-tight text-text">
+        Alchem<span class="text-accent">ist</span>
+      </a>
+      <ul class="hidden items-center gap-7 lg:flex">
+        <li><a href="../index.html#markets" class="text-sm font-medium text-text-dim transition-colors hover:text-text">Markets</a></li>
+        <li><a href="../index.html#spotlight" class="text-sm font-medium text-text-dim transition-colors hover:text-text">Spotlight</a></li>
+        <li><a href="../index.html#compare" class="text-sm font-medium text-text-dim transition-colors hover:text-text">Compare</a></li>
+        <li><a href="../index.html#gallery" class="text-sm font-medium text-text-dim transition-colors hover:text-text">Gallery</a></li>
+      </ul>
+    </div>
+    <div class="flex items-center gap-3">
+      <button class="hidden rounded-lg border border-border-light px-4 py-2 text-sm font-medium text-text-dim transition-colors hover:border-text-faint hover:text-text sm:block">
+        Watchlist
+      </button>
+      <button class="rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-bg transition-colors hover:bg-accent/90">
+        Configure
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══ BREADCRUMB ═══ -->
+<div class="mx-auto max-w-[1440px] px-4 pt-6 sm:px-6">
+  <div class="flex items-center gap-2 text-xs text-text-faint">
+    <a href="../index.html" class="hover:text-text-dim transition-colors">Markets</a>
+    <span>/</span>
+    <span class="text-text-dim">765LT</span>
+  </div>
+</div>
+
+<!-- ═══ HERO ═══ -->
+<section class="mx-auto max-w-[1440px] px-4 py-8 sm:px-6 sm:py-10">
+  <div class="grid gap-8 lg:grid-cols-[1.2fr_1fr] lg:gap-12">
+
+    <div class="overflow-hidden rounded-2xl border border-border">
+      <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1400&q=85" alt="McLaren 765LT" class="h-full w-full object-cover" style="max-height: 520px;"/>
+    </div>
+
+    <div class="flex flex-col">
+      <p class="text-[11px] font-semibold uppercase tracking-[0.2em] text-accent">McLaren · Longtail</p>
+      <h1 class="mt-2 font-display text-4xl font-bold text-text sm:text-5xl">765LT</h1>
+      <p class="mt-3 text-sm text-text-faint">V8 Twin-Turbo · Rear-Wheel Drive</p>
+
+      <div class="mt-6 flex items-end gap-3">
+        <span class="num text-4xl font-bold text-text">$500,000</span>
+        <span class="num mb-1 inline-flex items-center gap-1 rounded-md bg-up-dim px-2 py-1 text-sm font-semibold text-up">▲ 245 mph top speed</span>
+      </div>
+
+      <div class="mt-8 grid grid-cols-3 gap-3">
+        <div class="rounded-xl border border-border bg-surface px-4 py-4">
+          <div class="num text-xl font-bold text-text">765<span class="ml-0.5 text-xs text-accent">hp</span></div>
+          <div class="mt-1 text-[10px] font-medium uppercase tracking-wider text-text-faint">Max Power</div>
+        </div>
+        <div class="rounded-xl border border-border bg-surface px-4 py-4">
+          <div class="num text-xl font-bold text-text">2.8<span class="ml-0.5 text-xs text-accent">s</span></div>
+          <div class="mt-1 text-[10px] font-medium uppercase tracking-wider text-text-faint">0–60 mph</div>
+        </div>
+        <div class="rounded-xl border border-border bg-surface px-4 py-4">
+          <div class="num text-xl font-bold text-text">245<span class="ml-0.5 text-xs text-accent">mph</span></div>
+          <div class="mt-1 text-[10px] font-medium uppercase tracking-wider text-text-faint">Top Speed</div>
+        </div>
+      </div>
+
+      <div class="mt-8 flex gap-3">
+        <a href="#" class="rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-bg transition-colors hover:bg-accent/90">
+          Request a quote
+        </a>
+        <a href="#" class="rounded-lg border border-border-light px-6 py-3 text-sm font-semibold text-text transition-colors hover:border-text-faint">
+          Add to watchlist
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ DESCRIPTION + FULL SPECS ═══ -->
+<section class="border-y border-border bg-surface">
+  <div class="mx-auto max-w-[1440px] px-4 py-14 sm:px-6 sm:py-16">
+    <div class="grid gap-12 lg:grid-cols-[1fr_1.2fr]">
+
+      <div>
+        <p class="text-[11px] font-semibold uppercase tracking-[0.2em] text-accent">Overview</p>
+        <h2 class="mt-2 font-display text-2xl font-bold text-text sm:text-3xl">The hardcore 720S</h2>
+        <p class="mt-5 text-[15px] leading-relaxed text-text-dim">
+          LT stands for Longtail, McLaren's badge reserved for the most track-focused, weight-obsessed version of a given platform. Built from the 720S, the 765LT strips roughly 80 kg out and adds 45 more horsepower, with a lengthened rear body and fixed rear wing for serious downforce.
+        </p>
+        <p class="mt-4 text-[15px] leading-relaxed text-text-dim">
+          Production was famously capped at a limited run, making the 765LT one of the rarer modern McLarens on the road. Inside, even the carpet is gone in favor of exposed carbon, every gram accounted for.
+        </p>
+      </div>
+
+      <div>
+        <p class="text-[11px] font-semibold uppercase tracking-[0.2em] text-accent">Full Specification</p>
+        <div class="mt-4 overflow-hidden rounded-2xl border border-border bg-surface-2">
+          <dl class="divide-y divide-border">
+            <div class="flex items-center justify-between px-5 py-3.5">
+              <dt class="text-sm text-text-faint">Engine</dt>
+              <dd class="num text-sm font-semibold text-text">4.0L V8 Twin-Turbo</dd>
+            </div>
+            <div class="flex items-center justify-between px-5 py-3.5">
+              <dt class="text-sm text-text-faint">Max Power</dt>
+              <dd class="num text-sm font-semibold text-text">765 hp</dd>
+            </div>
+            <div class="flex items-center justify-between px-5 py-3.5">
+              <dt class="text-sm text-text-faint">Max Torque</dt>
+              <dd class="num text-sm font-semibold text-text">590 lb-ft</dd>
+            </div>
+            <div class="flex items-center justify-between px-5 py-3.5">
+              <dt class="text-sm text-text-faint">0–60 mph</dt>
+              <dd class="num text-sm font-semibold text-text">2.8 s</dd>
+            </div>
+            <div class="flex items-center justify-between px-5 py-3.5">
+              <dt class="text-sm text-text-faint">Top Speed</dt>
+              <dd class="num text-sm font-semibold text-up">245 mph</dd>
+            </div>
+            <div class="flex items-center justify-between px-5 py-3.5">
+              <dt class="text-sm text-text-faint">Drivetrain</dt>
+              <dd class="num text-sm font-semibold text-text">Rear-Wheel Drive</dd>
+            </div>
+            <div class="flex items-center justify-between px-5 py-3.5">
+              <dt class="text-sm text-text-faint">Transmission</dt>
+              <dd class="num text-sm font-semibold text-text">7-Speed Dual-Clutch</dd>
+            </div>
+            <div class="flex items-center justify-between px-5 py-3.5">
+              <dt class="text-sm text-text-faint">Curb Weight</dt>
+              <dd class="num text-sm font-semibold text-text">2,749 lb</dd>
+            </div>
+            <div class="flex items-center justify-between px-5 py-3.5">
+              <dt class="text-sm text-text-faint">Chassis</dt>
+              <dd class="num text-sm font-semibold text-text">Carbon Fibre Monocage</dd>
+            </div>
+            <div class="flex items-center justify-between px-5 py-3.5">
+              <dt class="text-sm text-text-faint">Price</dt>
+              <dd class="num text-sm font-semibold text-text">$500,000</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PHOTO GALLERY ═══ -->
+<section class="mx-auto max-w-[1440px] px-4 py-16 sm:px-6 sm:py-20">
+  <p class="text-[11px] font-semibold uppercase tracking-[0.2em] text-accent">Gallery</p>
+  <h2 class="mt-2 font-display text-3xl font-bold text-text sm:text-4xl">Every Angle</h2>
+
+  <div class="mt-8 grid grid-cols-2 gap-2 sm:grid-cols-4 sm:grid-rows-2">
+    <div class="col-span-2 row-span-2 overflow-hidden rounded-xl">
+      <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1100&q=85" alt="765LT front" class="h-full w-full object-cover transition-transform duration-500 hover:scale-105" style="min-height: 240px;"/>
+    </div>
+    <div class="overflow-hidden rounded-xl">
+      <img src="https://images.unsplash.com/photo-1522441040106-2621f423b5eb?w=600&q=80" alt="765LT detail" class="h-full w-full object-cover transition-transform duration-500 hover:scale-105" style="min-height: 116px;"/>
+    </div>
+    <div class="overflow-hidden rounded-xl">
+      <img src="https://images.unsplash.com/photo-1493238792000-8113da705763?w=600&q=80" alt="765LT interior" class="h-full w-full object-cover transition-transform duration-500 hover:scale-105" style="min-height: 116px;"/>
+    </div>
+    <div class="overflow-hidden rounded-xl">
+      <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=600&q=80" alt="765LT wheel" class="h-full w-full object-cover transition-transform duration-500 hover:scale-105" style="min-height: 116px;"/>
+    </div>
+    <div class="overflow-hidden rounded-xl">
+      <img src="https://images.unsplash.com/photo-1514316454349-750a7fd3da3a?w=600&q=80" alt="765LT rear" class="h-full w-full object-cover transition-transform duration-500 hover:scale-105" style="min-height: 116px;"/>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="border-t border-border">
+  <div class="mx-auto max-w-[1440px] px-4 py-14 sm:px-6">
+    <div class="flex flex-col gap-10 border-b border-border pb-10 sm:flex-row sm:justify-between">
+      <div>
+        <div class="font-display text-lg font-bold text-text">Alchem<span class="text-accent">ist</span></div>
+        <p class="mt-3 max-w-[200px] text-sm leading-relaxed text-text-faint">Where precision meets passion. Supercars for those who demand the best.</p>
+      </div>
+    </div>
+    <div class="flex flex-col gap-3 pt-6 sm:flex-row sm:items-center sm:justify-between">
+      <p class="text-xs text-text-faint">© 2026 Alchemist Supercars. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

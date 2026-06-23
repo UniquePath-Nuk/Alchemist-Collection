@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Log In — Alchemist</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="dist/output.css">
+
+<style>
+  input:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px rgba(0, 194, 168, 0.15);
+  }
+  input::placeholder {
+    color: var(--color-text-faint);
+    font-family: var(--font-body);
+    font-size: 14px;
+  }
+</style>
+</head>
+<body class="bg-bg text-text font-body antialiased min-h-screen flex flex-col">
+
+<!-- ═══ NAV ═══ -->
+<nav class="border-b border-border bg-bg/95 backdrop-blur-md">
+  <div class="mx-auto flex h-16 max-w-[1440px] items-center justify-between px-4 sm:px-6">
+    <a href="index.html" class="font-display text-xl font-bold tracking-tight text-text">
+      Alchem<span class="text-accent">ist</span>
+    </a>
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="hidden text-sm font-medium text-text-dim transition-colors hover:text-text sm:block">
+        Back to Home
+      </a>
+      <a href="signup.html" class="rounded-lg border border-border-light px-4 py-2 text-sm font-semibold text-text-dim transition-colors hover:border-text-faint hover:text-text">
+        Sign Up
+      </a>
+      <a href="login.html" class="rounded-lg border border-accent px-4 py-2 text-sm font-semibold text-accent">
+        Log In
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══ MAIN ═══ -->
+<main class="flex flex-1 items-center justify-center px-4 py-16 sm:px-6">
+  <div class="w-full max-w-md">
+
+    <!-- Header -->
+    <div class="mb-10 text-center">
+      <div class="font-display text-2xl font-bold text-text">
+        Alchem<span class="text-accent">ist</span>
+      </div>
+      <h1 class="mt-4 font-display text-3xl font-bold text-text">Welcome back</h1>
+      <p class="mt-2 text-sm text-text-dim">Log in to access your watchlist and saved cars.</p>
+    </div>
+
+    <!-- Form card -->
+    <div class="overflow-hidden rounded-2xl border border-border bg-surface">
+
+      <!-- Accent line at top -->
+      <div class="h-0.5 w-full bg-accent"></div>
+
+      <form action="#" method="POST" class="px-8 py-8">
+
+        <!-- Email -->
+        <div class="mb-5">
+          <label for="email" class="num mb-2 block text-[10px] font-semibold uppercase tracking-[0.18em] text-text-faint">
+            Email Address
+          </label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="you@email.com"
+            required
+            class="w-full rounded-lg border border-border bg-surface-2 px-4 py-3 text-sm text-text transition-colors hover:border-border-light"
+          />
+        </div>
+
+        <!-- Password -->
+        <div class="mb-2">
+          <label for="password" class="num mb-2 block text-[10px] font-semibold uppercase tracking-[0.18em] text-text-faint">
+            Password
+          </label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Your password"
+            required
+            class="w-full rounded-lg border border-border bg-surface-2 px-4 py-3 text-sm text-text transition-colors hover:border-border-light"
+          />
+        </div>
+
+        <!-- Forgot password -->
+        <div class="mb-8 text-right">
+          <a href="#" class="text-xs font-medium text-text-faint transition-colors hover:text-accent">
+            Forgot password?
+          </a>
+        </div>
+
+        <!-- Submit -->
+        <button
+          type="submit"
+          class="w-full rounded-lg bg-accent py-3 text-sm font-semibold text-bg transition-colors hover:bg-accent/90"
+        >
+          Log In
+        </button>
+
+        <!-- Divider -->
+        <div class="my-6 flex items-center gap-3">
+          <div class="h-px flex-1 bg-border"></div>
+          <span class="text-xs text-text-faint">or</span>
+          <div class="h-px flex-1 bg-border"></div>
+        </div>
+
+        <!-- Sign up link -->
+        <p class="text-center text-sm text-text-dim">
+          Don't have an account?
+          <a href="signup.html" class="font-semibold text-accent transition-colors hover:text-accent/80">Sign up</a>
+        </p>
+
+      </form>
+    </div>
+
+    <!-- Legal note -->
+    <p class="mt-6 text-center text-xs text-text-faint">
+      By logging in you agree to our
+      <a href="#" class="text-text-dim underline hover:text-text">Terms</a>
+      and
+      <a href="#" class="text-text-dim underline hover:text-text">Privacy Policy</a>.
+    </p>
+
+  </div>
+</main>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="border-t border-border py-6">
+  <div class="mx-auto max-w-[1440px] px-4 text-center sm:px-6">
+    <p class="text-xs text-text-faint">© 2026 Alchemist Supercars. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
