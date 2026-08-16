@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0B0E11;
+  --color-surface: #14171C;
+  --color-surface-2: #1A1E24;
+  --color-border: #1E2227;
+  --color-border-light: #2B3139;
+  --color-text: #EAECEF;
+  --color-text-dim: #848E9C;
+  --color-text-faint: #5E6673;
+  --color-accent: #00C2A8;
+  --color-accent-dim: #0A3D38;
+  --color-up: #00C2A8;
+  --color-up-dim: #0A3D38;
+  --color-down: #F6465D;
+  --color-down-dim: #3D1620;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  --animate-marquee: marquee 32s linear infinite;
+  --animate-pulse-dot: pulse-dot 2s ease-in-out infinite;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    overflow-x: clip;
+    width: 100%;
+    max-width: 100%;
+  }
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    overflow-x: clip;
+    width: 100%;
+    max-width: 100%;
+  }
+  #root {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    overflow-x: clip;
+  }
+  ::selection {
+    background-color: var(--color-accent);
+    color: var(--color-bg);
+  }
+  ::-webkit-scrollbar { height: 6px; width: 6px; }
+  ::-webkit-scrollbar-track { background: var(--color-surface); }
+  ::-webkit-scrollbar-thumb { background: var(--color-border-light); border-radius: 3px; }
+}
+
+@layer components {
+  .num {
+    font-family: var(--font-mono);
+    font-feature-settings: "tnum" 1;
+  }
+}

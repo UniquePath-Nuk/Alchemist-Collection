@@ -1,0 +1,18 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Blog posts (from your other lab, if reusing the same Firebase project)
+    match /posts/{postId} {
+      allow read: if true;
+      allow write: if request.auth != null;
+    }
+
+    // Car listings for this project
+    match /cars/{carId} {
+      allow read: if true;
+      allow write: if request.auth != null;
+    }
+  }
+}
