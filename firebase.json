@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "target": "alchemist",
     "public": "dist",
     "ignore": [
       "firebase.json",

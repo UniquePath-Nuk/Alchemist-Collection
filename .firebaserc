@@ -1,5 +1,15 @@
 {
   "projects": {
     "default": "my-react-app-999a1"
-  }
+  },
+  "targets": {
+    "my-react-app-999a1": {
+      "hosting": {
+        "alchemist": [
+          "alchemist-supercars"
+        ]
+      }
+    }
+  },
+  "etags": {}
 }
