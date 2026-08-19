@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { db } from "../../backend/lib/firebaseClient";
+import { auth } from "../../backend/lib/firebaseClient";
 import { sendPasswordResetEmail } from "firebase/auth";
 
 export default function ForgotPasswordPage() {
