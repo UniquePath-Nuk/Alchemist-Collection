@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
-import { db } from "../lib/firebaseClient";
+import { db } from "../../backend/lib/firebaseClient";
 import { doc, getDoc } from "firebase/firestore";
 
 export default function CarDetailPage() {

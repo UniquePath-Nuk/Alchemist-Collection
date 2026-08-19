@@ -1,23 +1,23 @@
 import { useEffect, useState } from "react";
 import { Routes, Route, Navigate, useLocation } from "react-router-dom";
-import { auth } from "./lib/firebaseClient";
+import { auth } from "./backend/lib/firebaseClient";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 
-import Navbar from "./components/Navbar";
-import Sidebar from "./components/Sidebar";
-import Footer from "./components/Footer";
+import Navbar from "./frontend/components/Navbar";
+import Sidebar from "./frontend/components/Sidebar";
+import Footer from "./frontend/components/Footer";
 
-import HomePage from "./pages/HomePage";
-import CarDetailPage from "./pages/CarDetailPage";
-import AboutPage from "./pages/AboutPage";
-import ContactPage from "./pages/ContactPage";
+import HomePage from "./frontend/pages/HomePage";
+import CarDetailPage from "./frontend/pages/CarDetailPage";
+import AboutPage from "./frontend/pages/AboutPage";
+import ContactPage from "./frontend/pages/ContactPage";
 
-import LoginPage from "./pages/LoginPage";
-import RegisterPage from "./pages/RegisterPage";
-import ForgotPasswordPage from "./pages/ForgotPasswordPage";
+import LoginPage from "./frontend/pages/LoginPage";
+import RegisterPage from "./frontend/pages/RegisterPage";
+import ForgotPasswordPage from "./frontend/pages/ForgotPasswordPage";
 
-import AdminPortalPage from "./pages/AdminPortalPage";
-import CarsManager from "./pages/CarsManager";
+import AdminPortalPage from "./frontend/pages/AdminPortalPage";
+import CarsManager from "./frontend/pages/CarsManager";
 
 export default function App() {
   const [user, setUser] = useState(null);
@@ -79,7 +79,7 @@ export default function App() {
   }
 
   return (
-  <div className="flex min-h-screen flex-col overflow-x-hidden bg-bg text-text">
+    <div className="flex min-h-screen flex-col overflow-x-hidden bg-bg text-text">
       <Navbar
         user={user}
         onLogout={handleLogout}
@@ -87,7 +87,7 @@ export default function App() {
         setIsSidebarOpen={setIsSidebarOpen}
       />
 
-      <div className="flex min-w-0 flex-1 pt-25 relative">  
+      <div className="flex min-w-0 flex-1 pt-25 relative">
         {user && isAdminRoute && (
           <Sidebar user={user} isOpen={isSidebarOpen} setIsOpen={setIsSidebarOpen} />
         )}

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { db } from "../lib/firebaseClient";
+import { db } from "../../backend/lib/firebaseClient";
 import { collection, getDocs, query, orderBy, doc, updateDoc } from "firebase/firestore";
 import { StatCard, RecentCarsTable } from "../components/DashboardComponents";
 

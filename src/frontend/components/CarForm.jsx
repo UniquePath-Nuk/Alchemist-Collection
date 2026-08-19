@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
-import { storage } from "../lib/firebaseClient";
+import { storage } from "../../backend/lib/firebaseClient";
 
 const categories = ["Hypercar", "GT", "Track", "Hybrid"];
 

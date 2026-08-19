@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
-import { db } from "../lib/firebaseClient";
+import { db } from "../../backend/lib/firebaseClient";
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
