@@ -19,6 +19,7 @@ export default function CarsManager({ user }) {
   const [loading, setLoading] = useState(true);
   const [viewMode, setViewMode] = useState("list");
   const [editingCar, setEditingCar] = useState(null);
+  const [saveError, setSaveError] = useState("");
 
   const carsRef = collection(db, "cars");
 
@@ -50,6 +51,7 @@ export default function CarsManager({ user }) {
   }
 
   async function handleSaveCar(formData) {
+    setSaveError("");
     try {
       if (editingCar) {
         const carDoc = doc(db, "cars", editingCar.id);
@@ -66,9 +68,11 @@ export default function CarsManager({ user }) {
       }
       setViewMode("list");
       setEditingCar(null);
-      fetchCars();
+      await fetchCars();
     } catch (error) {
       console.error("Error saving car:", error);
+      setSaveError(error?.message || "Could not save the listing. Please try again.");
+      throw error;
     }
   }
 
@@ -88,6 +92,12 @@ export default function CarsManager({ user }) {
         <h1 className="font-display text-2xl font-bold text-text">Inventory Management</h1>
         <p className="mt-0.5 text-xs text-text-faint">Create, update, and manage public car listings.</p>
       </div>
+
+      {saveError && viewMode === "list" && (
+        <div className="rounded-lg border border-down/30 bg-down/10 px-4 py-3 text-sm text-down">
+          {saveError}
+        </div>
+      )}
 
       {viewMode === "list" ? (
         <CarList
